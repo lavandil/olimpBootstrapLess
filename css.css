@@ -1,4 +1,7 @@
 @import "reset.css";
+.none {
+  display: none;
+}
 body {
   margin: 0;
   width: 100%;
@@ -144,18 +147,14 @@ body .container .white header .rio-logo img {
   padding-top: 65px;
 }
 body .container .white .main-menu {
+  position: relative;
+  overflow: hidden;
   min-height: 70px;
   height: 100%;
   background-color: #167AAE;
   border-bottom: 2px solid #587A90;
   border-top: 2px solid #55BFEC;
   font-weight: 800;
-}
-@media (max-width: 1245px) {
-  body .container .white .main-menu {
-    background-color: orange;
-    min-height: 40px;
-  }
 }
 body .container .white .main-menu > li {
   display: inline-block;
@@ -167,11 +166,11 @@ body .container .white .main-menu > li {
   font-size: 18px;
   position: relative;
 }
-@media (max-width: 1245px) {
+@media (max-width: 1200px) {
   body .container .white .main-menu > li {
-    height: 40px;
     line-height: 40px;
     width: calc(100% - 30px);
+    display: none;
   }
 }
 body .container .white .main-menu > li a {
@@ -209,6 +208,32 @@ body .container .white .main-menu > li:hover ul {
   width: 100%;
   border-top: none;
   margin-left: -15px;
+}
+body .container .white .main-menu .navbar-toggle {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  display: none;
+  padding: 9px 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  border-color: #ddd;
+  transform: translate(-50%, 50%);
+}
+@media (max-width: 1200px) {
+  body .container .white .main-menu .navbar-toggle {
+    display: block;
+  }
+}
+body .container .white .main-menu .navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #888;
+}
+body .container .white .main-menu .navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
 }
 body .container .white .superMain {
   margin: 0 40px;

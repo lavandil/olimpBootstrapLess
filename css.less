@@ -20,6 +20,9 @@
 //  box-sizing:border-box;
 //}
 
+.none {
+  display:none;
+}
 
 body {
 
@@ -208,19 +211,21 @@ body {
       }
 
       .main-menu {
+        position:relative;
+        overflow:hidden;
         min-height: 70px;
         //двухстрочное меню
-
-        @media(max-width:1245px){
-          background-color:orange;
-          min-height: 40px;
-        }
 
         height:100%;
         background-color: #167AAE;
         border-bottom: 2px solid #587A90;
         border-top: 2px solid #55BFEC;
         font-weight: 800;
+
+        @media(max-width:1200px){
+          //background-color:orange;
+          //min-height: 40px;
+        }
 
         > li {
           display: inline-block;
@@ -235,11 +240,17 @@ body {
 
           position: relative;
 
-          @media(max-width:1245px){
-            height: 40px;
+          @media(max-width:1200px){
+            //height: 40px;
             line-height:40px;
+            //background-color:orange;
             width:calc(~"100% - 30px");
+            display:none;
             //width: 100%;
+          }
+
+          @media(max-width:1200px){
+            //display:none;
           }
 
           a {
@@ -282,6 +293,41 @@ body {
               width: 100%;
               border-top: none;
               margin-left: -15px;
+            }
+          }
+        }
+
+        .navbar-toggle{
+          position: absolute;
+          top:0;
+          right:20px;
+          display:none;
+          padding: 9px 10px;
+          border: 1px solid transparent;
+          border-radius: 4px;
+          border-color: #ddd;
+
+          //float:right;
+
+          transform: translate(-50%,50%);
+          //http://stackoverflow.com/questions/6490252/vertically-centering-a-div-inside-another-div
+
+          @media(max-width: 1200px){
+            display:block;
+          }
+
+
+          .icon-bar{
+            display:block;
+            width: 22px;
+            height: 2px;
+            border-radius: 1px;
+
+            background-color: #888;
+
+            //???????????????????
+            +.icon-bar{
+              margin-top:4px;
             }
           }
         }
