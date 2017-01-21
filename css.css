@@ -1,0 +1,542 @@
+@import "reset.css";
+body {
+  margin: 0;
+  width: 100%;
+  min-width: 100%;
+  background: url("images/background.png") no-repeat;
+  background-position: top center;
+  background-size: cover;
+  font: 16px "PT Sans";
+  box-sizing: border-box;
+}
+body b {
+  font-weight: bold;
+}
+body a {
+  text-decoration: none;
+}
+body h1 {
+  font: 25px "PT Sans";
+  text-transform: uppercase;
+}
+body .container {
+  margin: 0 auto;
+  width: 1245px;
+}
+@media (max-width: 1245px) {
+  body .container {
+    width: 100%;
+    margin: 0;
+  }
+}
+body .container .top-logo {
+  height: 120px;
+  background: url("images/top-logo.png") no-repeat top center;
+}
+body .container .white {
+  background: url("images/main_page_logo.png") no-repeat white;
+  background-position: 80% bottom;
+  background-size: 30%;
+  padding-bottom: 45px;
+  /*http://www.cssmatic.com/box-shadow*/
+  -webkit-box-shadow: 0px 0px 23px 1px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 0px 0px 23px 1px rgba(0, 0, 0, 0.58);
+  box-shadow: 0px 0px 23px 1px rgba(0, 0, 0, 0.58);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+body .container .white header {
+  height: 215px;
+  background: url("images/main_page_logo.png") no-repeat;
+  background-size: contain;
+  background-position: 75%;
+}
+body .container .white header > div {
+  float: left;
+  height: 100%;
+  box-sizing: border-box;
+}
+body .container .white header:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+body .container .white header .logo-header {
+  padding: 45px 0 0 45px;
+}
+@media (max-width: 850px) {
+  body .container .white header .logo-header {
+    display: none;
+  }
+}
+body .container .white header .logo-header img {
+  height: 80%;
+}
+body .container .white header .site-name {
+  text-transform: uppercase;
+  padding-left: 38px;
+  padding-top: 80px;
+  color: #0072b9;
+}
+@media (max-width: 660px) {
+  body .container .white header .site-name {
+    width: 300px;
+  }
+}
+body .container .white header .rio-timer {
+  width: 240px;
+  height: 100%;
+  /*background-color: pink;*/
+  padding-top: 55px;
+  text-align: center;
+  text-transform: uppercase;
+  float: right;
+}
+body .container .white header .rio-timer span {
+  display: inline-block;
+  width: 80%;
+  color: #0072b9;
+}
+body .container .white header .rio-timer .clock {
+  width: 100%;
+  margin-top: 5px;
+}
+body .container .white header .rio-timer .clock .row div {
+  display: inline-block;
+  width: 50px;
+}
+body .container .white header .rio-timer .clock .row:first-of-type div {
+  font-size: 12px;
+  color: #a0a0a0;
+}
+body .container .white header .rio-timer .clock .row:last-of-type div {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  line-height: 50px;
+}
+body .container .white header .rio-timer .clock .row .red {
+  background-color: #e31e24;
+}
+body .container .white header .rio-timer .clock .row .green {
+  background-color: #0072b9;
+}
+body .container .white header .rio-timer .clock .row .blue {
+  background-color: #62ba4c;
+}
+body .container .white header .rio-logo {
+  float: right;
+}
+@media (max-width: 660px) {
+  body .container .white header .rio-logo {
+    display: none;
+  }
+}
+body .container .white header .rio-logo img {
+  height: 40%;
+  padding-top: 65px;
+}
+body .container .white .main-menu {
+  height: 70px;
+  background-color: #167AAE;
+  border-bottom: 2px solid #587A90;
+  border-top: 2px solid #55BFEC;
+  font-weight: 800;
+}
+body .container .white .main-menu > li {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0 15px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+  font-size: 18px;
+  position: relative;
+}
+body .container .white .main-menu > li a {
+  color: white;
+}
+body .container .white .main-menu > li ul {
+  display: none;
+  position: absolute;
+}
+body .container .white .main-menu > li ul li {
+  display: block;
+  color: #467A9A;
+  line-height: normal;
+  text-align: left;
+  margin: 0;
+  padding: 5px 0 10px 15px;
+}
+body .container .white .main-menu > li ul li:last-of-type {
+  padding-bottom: 40px;
+}
+body .container .white .main-menu > li:hover {
+  background: white;
+  border-left: 2px solid #55BFEC;
+  border-right: 2px solid #55BFEC;
+  border-bottom: none;
+  padding: 0 13px;
+}
+body .container .white .main-menu > li:hover a {
+  color: #467A9A;
+}
+body .container .white .main-menu > li:hover ul {
+  display: block;
+  background-color: white;
+  border: 2px solid #55BFEC;
+  width: 100%;
+  border-top: none;
+  margin-left: -15px;
+}
+body .container .white .superMain {
+  margin: 0 40px;
+}
+@media (max-width: 1245px) {
+  body .container .white .superMain {
+    margin: 0;
+  }
+}
+body .container .white .superMain .partners {
+  box-shadow: 0px 14px 10px -10px rgba(0, 0, 0, 0.29);
+}
+body .container .white .superMain .partners:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+body .container .white .superMain .partners .partner {
+  float: left;
+  height: 110px;
+  width: 33.33333333%;
+}
+@media (max-width: 1245px) {
+  body .container .white .superMain .partners .partner {
+    display: block;
+    width: 100%;
+    height: 70px;
+  }
+}
+body .container .white .superMain .partners .partner .label {
+  height: 100%;
+  width: 60%;
+  margin-left: 30%;
+  padding-top: 35px;
+}
+body .container .white .superMain .partners .mok {
+  box-shadow: 0px 1px 0px 0px red, 0px 2px 0px 0px #e6878a;
+  background: url("images/mok.png") no-repeat;
+  background-position: left center;
+  color: red;
+}
+body .container .white .superMain .partners .mok a:visited {
+  color: red;
+}
+body .container .white .superMain .partners .eok {
+  box-shadow: 0px 1px 0px 0px blue, 0px 2px 0px 0px #75c6e7;
+  background: url("images/eok.png") no-repeat;
+  background-position: left center;
+  color: blue;
+}
+body .container .white .superMain .partners .eok a:visited {
+  color: blue;
+}
+body .container .white .superMain .partners .nok {
+  box-shadow: 0px 1px 0px 0px green, 0px 2px 0px 0px #98be8f;
+  background: url("images/nok.png") no-repeat;
+  background-position: left center;
+  color: green;
+}
+body .container .white .superMain .partners .nok a:visited {
+  color: green;
+}
+body .container .white .superMain .main-content {
+  margin-top: 40px;
+  margin-right: 5%;
+}
+@media (max-width: 1245px) {
+  body .container .white .superMain .main-content {
+    padding-right: 0;
+  }
+}
+@media (max-width: 1000px) {
+  body .container .white .superMain .main-content {
+    margin-right: 0;
+  }
+}
+body .container .white .superMain .main-content:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+body .container .white .superMain .main-content section {
+  float: left;
+}
+body .container .white .superMain .main-content section .image-container {
+  max-width: 655px;
+  min-height: 350px;
+  background-color: #ebecec;
+  margin-left: -40px;
+  margin-top: 28px;
+}
+@media (max-width: 1245px) {
+  body .container .white .superMain .main-content section .image-container {
+    margin-left: 0;
+  }
+}
+body .container .white .superMain .main-content section .image-container .bigImage {
+  width: 78%;
+  float: left;
+  height: 100%;
+}
+@media (max-width: 660px) {
+  body .container .white .superMain .main-content section .image-container .bigImage {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 2.5%;
+    background-color: black;
+  }
+  body .container .white .superMain .main-content section .image-container .bigImage img {
+    height: auto;
+    width: 95%;
+  }
+}
+body .container .white .superMain .main-content section .image-container .smallImage {
+  margin: 5px 5px 0 0;
+  float: right;
+  width: 21%;
+  height: 100px;
+  overflow: hidden;
+}
+@media (max-width: 660px) {
+  body .container .white .superMain .main-content section .image-container .smallImage {
+    float: none;
+    width: 100%;
+  }
+}
+body .container .white .superMain .main-content section .image-container .smallImage img {
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+body .container .white .superMain .main-content section .time {
+  color: #8e8f89;
+  float: left;
+}
+body .container .white .superMain .main-content section h1 {
+  margin-left: 15%;
+  color: #0072b9;
+}
+body .container .white .superMain .main-content section .text {
+  margin-top: 70px;
+  max-width: 510px;
+  padding-left: 105px;
+}
+@media (max-width: 660px) {
+  body .container .white .superMain .main-content section .text {
+    padding-left: 15px;
+  }
+}
+body .container .white .superMain .main-content aside {
+  width: 324px;
+  float: right;
+}
+@media (max-width: 1000px) {
+  body .container .white .superMain .main-content aside {
+    display: none;
+  }
+}
+@media (max-width: 1050px) {
+  body .container .white .superMain .main-content aside {
+    float: none;
+    margin-left: 620px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 1245px) {
+  body .container .white .superMain .main-content aside {
+    margin-right: 0;
+  }
+}
+body .container .white .superMain .main-content aside:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+body .container .white .superMain .main-content aside .advertisement {
+  color: #ffffff;
+  width: 324px;
+  height: 470px;
+}
+body .container .white .superMain .main-content aside .advertisement:not(:first-child) {
+  margin-top: 50px;
+}
+body .container .white .superMain .main-content aside .rings {
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+body .container .white .superMain .main-content aside .rings span {
+  position: absolute;
+  display: inline-block;
+  margin: 270px 55px 0 38px;
+  color: #ffffff;
+  z-index: 11;
+}
+body .container .white .superMain .main-content aside .rings span h1 {
+  margin-bottom: 18px;
+}
+body .container .white .superMain .main-content aside .rings img {
+  max-height: 100% !important;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  transition: opacity 0.7s ease-in-out;
+}
+body .container .white .superMain .main-content aside .rings .sideMenu {
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 12;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+body .container .white .superMain .main-content aside .rings .sideMenu li {
+  background-color: #0072b9;
+}
+body .container .white .superMain .main-content aside .rings .sideMenu li:hover {
+  background-color: rgba(0, 114, 185, 0.1);
+}
+body .container .white .superMain .main-content aside .rings .sideMenu li:hover a {
+  color: #0072b9;
+}
+body .container .white .superMain .main-content aside .rings .sideMenu li:hover span {
+  background-color: rgba(0, 114, 185, 0.1);
+}
+body .container .white .superMain .main-content aside .rings .sideMenu li a {
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: 21px;
+  padding: 8px 0 7px 30px;
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-weight: 800;
+  border-bottom: 1px solid white;
+}
+body .container .white .superMain .main-content aside .rings .sideMenu li .special {
+  line-height: 18px;
+}
+body .container .white .superMain .main-content aside .rings .sideMenu li:last-of-type a {
+  border-bottom: none;
+}
+body .container .white .superMain .main-content aside .rings:hover img {
+  opacity: 0.1;
+}
+body .container .white .superMain .main-content aside .rings:hover span {
+  opacity: 0.1;
+}
+body .container .white .superMain .main-content aside .rings:hover .sideMenu {
+  display: block;
+}
+body .container .white .superMain .main-content aside .requests {
+  background: url("images/advertisement2.png") no-repeat;
+  background-size: 100%;
+}
+body .container .white .superMain .main-content aside .requests span {
+  display: inline-block;
+  margin: 30px 40px 0 25px;
+}
+body .container .white .superMain .main-content aside .requests h1 {
+  color: yellow;
+  display: inline;
+}
+body .container .white .superMain .main-content aside .requests img {
+  height: 50px;
+  margin-top: -50px;
+  margin-left: 10px;
+}
+body .container .blue-gradient {
+  margin: 0 auto;
+  margin-top: -10px;
+  height: 265px;
+  background: #0768a5;
+  background: -webkit-linear-gradient(45deg, #b7deed 0%, #71ceef 10%, #076ba5 100%);
+  color: #ffffff;
+  font-size: 110%;
+  z-index: 99999;
+  position: relative;
+}
+body .container .blue-gradient .left-part {
+  float: left;
+  width: 445px;
+  height: 100%;
+}
+body .container .blue-gradient .left-part span {
+  display: inline-block;
+  margin: 35px 75px 0 45px;
+}
+body .container .blue-gradient .left-part img {
+  display: block;
+  height: 30%;
+  margin: 60px 0 0 45px;
+}
+body .container .blue-gradient > img:last-child {
+  height: 100%;
+  float: right;
+}
+body footer {
+  height: 500px;
+  background-color: #ffffff;
+  min-width: 1245px;
+  margin-top: -130px;
+  padding-top: 130px;
+}
+@media (max-width: 1245px) {
+  body footer {
+    min-width: 100%;
+  }
+}
+body footer .footerDiv {
+  margin: 0 auto;
+  margin-top: 85px;
+  margin-bottom: 130px;
+  overflow: hidden;
+}
+@media (max-width: 1245px) {
+  body footer .footerDiv {
+    width: 100%;
+  }
+}
+body footer .footerDiv .sponsor-label {
+  text-align: center;
+  color: #0072b9;
+  margin-bottom: 25px;
+}
+body footer img {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 1245px) {
+  .left-part {
+    display: none;
+  }
+  .container {
+    width: 100%;
+  }
+  .main-content {
+    margin: 0 ;
+  }
+  .main-menu {
+    display: none;
+  }
+}

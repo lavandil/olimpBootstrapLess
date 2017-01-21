@@ -1,0 +1,794 @@
+@import "reset.css";
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+.border-radius(@radius1,@radius2,@radius3,@radius4 ) {
+  -webkit-border-radius: @radius1 @radius2 @radius3 @radius4 ;
+  -moz-border-radius:@radius1 @radius2 @radius3 @radius4;
+  border-radius: @radius1 @radius2 @radius3 @radius4;
+}
+
+.box-shadow(@x, @y, @blur, @spread, @color ){
+  -webkit-box-shadow: @x @y @blur @spread @color;
+  -moz-box-shadow: @x @y @blur @spread @color;
+  box-shadow: @x @y @blur @spread @color;
+}
+//*{
+//  box-sizing:border-box;
+//}
+
+
+body {
+  //display:table;
+  //http://stackoverflow.com/questions/25155408/body-width-smaller-than-content-width
+  margin: 0;
+  width: 100%;
+
+  //min-width:1000px;
+  min-width:100%;
+
+  background: url("images/background.png") no-repeat;
+  background-position: top center;
+  background-size: cover;
+  //background-size: contain;
+  font: 16px "PT Sans";
+  box-sizing: border-box;
+
+  //img{
+  //  max-width:100%;
+  //  max-height:100%;
+  //}
+
+  b{
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
+    font: 25px "PT Sans";
+    text-transform: uppercase;
+  }
+
+  .container {
+    @media(max-width: 1245px){
+      //width: 794px;
+      width: 100%;
+      margin:0;
+    }
+    margin: 0 auto;
+    //margin-top: 200px;
+    width: 1245px;
+    //background-color: white;
+    //height: 2000px;
+
+    .top-logo {
+      height: 120px;
+      background: url("images/top-logo.png") no-repeat top center;
+    }
+
+    .white {
+      background: url("images/main_page_logo.png") no-repeat white;
+      background-position: 80% bottom;
+      background-size: 30%;
+      //03.01
+      padding-bottom: 45px;
+
+      //Убрать высоту в конце
+      //height: 1000px;
+
+      /*http://www.cssmatic.com/box-shadow*/
+      //Less usage
+      .box-shadow(0px, 0px, 23px, 1px, rgba(0, 0, 0, 0.58));
+      .border-radius(7px);
+
+      header {
+        height: 215px;
+        background: url("images/main_page_logo.png") no-repeat;
+        background-size: contain;
+        background-position: 75%;
+
+        > div {
+          float: left;
+          height: 100%;
+          box-sizing: border-box;
+        }
+
+        &:after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+        .logo-header {
+          padding: 45px 0 0 45px;
+
+          @media(max-width:850px){
+            display:none;
+          }
+
+          img {
+            height: 80%;
+          }
+        }
+
+        .site-name {
+          text-transform: uppercase;
+          padding-left: 38px;
+          padding-top: 80px;
+          //width: 500px;
+          //min-width:330px;
+
+          color: rgb(0, 114, 185);
+
+          @media(max-width:660px){
+            width:300px;
+          }
+        }
+
+        .rio-timer {
+          width: 240px;
+          height: 100%;
+          /*background-color: pink;*/
+          //margin-left: 235px;
+          padding-top: 55px;
+          text-align: center;
+          text-transform: uppercase;
+
+          float:right;
+
+          span {
+            display: inline-block;
+            width: 80%;
+            color: rgb(0, 114, 185);
+          }
+
+          .clock {
+            width: 100%;
+            margin-top: 5px;
+
+            .row {
+              div {
+                display: inline-block;
+                width: 50px;
+                //outline: 1px solid green;
+              }
+              &:first-of-type div {
+                font-size: 12px;
+                color: rgb(160, 160, 160);
+              }
+
+              &:last-of-type div {
+                width: 50px;
+                height: 50px;
+                border-radius: 5px;
+                color: white;
+                font-size: 20px;
+                line-height: 50px;
+              }
+
+              .red {
+                background-color: rgb(227, 30, 36);
+              }
+
+              .green {
+                background-color: rgb(0, 114, 185);
+
+              }
+
+              .blue {
+                background-color: rgb(98, 186, 76);
+              }
+            }
+          }
+        }
+
+        .rio-logo {
+          float:right;
+          @media(max-width:660px){
+            display:none;
+          }
+          img {
+            height: 40%;
+            padding-top: 65px;
+          }
+        }
+      }
+
+      .main-menu {
+        height: 70px;
+        background-color: #167AAE;
+        border-bottom: 2px solid #587A90;
+        border-top: 2px solid #55BFEC;
+        font-weight: 800;
+
+        > li {
+          display: inline-block;
+          text-transform: uppercase;
+          padding: 0 15px;
+
+          text-align: center;
+          vertical-align: middle;
+
+          line-height: 70px;
+          font-size: 18px;
+
+          position: relative;
+
+          a {
+            color: white;
+          }
+          ul {
+            display: none;
+            position: absolute;
+
+            li {
+              display: block;
+              color: #467A9A;
+              //Обратить внимание
+              line-height: normal;
+              text-align: left;
+              margin: 0;
+              padding: 5px 0 10px 15px;
+
+              &:last-of-type {
+                padding-bottom: 40px;
+              }
+            }
+          }
+          &:hover {
+            background: white;
+            border-left: 2px solid #55BFEC;
+            border-right: 2px solid #55BFEC;
+            border-bottom: none;
+            //Можно ли лучше?
+            padding: 0 13px;
+
+            a {
+              color: #467A9A;
+            }
+
+            ul {
+              display: block;
+              background-color: white;
+              border: 2px solid #55BFEC;
+              width: 100%;
+              border-top: none;
+              margin-left: -15px;
+            }
+          }
+        }
+      }
+      //Main-menu end
+
+      .superMain {
+        margin: 0 40px;
+
+        @media(max-width:1245px){
+
+          //margin-right:0;
+          margin:0;
+      }
+        .partners {
+
+          &:after{
+            display:table;
+            clear:both;
+            content:"";
+          }
+          //min-height: 110px;
+
+          box-shadow: 0px 14px 10px -10px rgba(0, 0, 0, 0.29);
+
+          @media(max-width:1245px){
+
+          }
+          //Не нужно ?
+          //&::after{
+          //  content:"";
+          //  clear: both;
+          //  display: table;
+          //}
+          .partner {
+            float: left;
+            //height:100%;
+            height: 110px;
+            width: 33.33333333%;
+
+            @media(max-width:1245px){
+              display:block;
+              width:100%;
+              height: 70px;
+            }
+
+            //a{
+            //  display:inline-block;
+            //  width:100%;
+            //
+            //}
+            .label {
+              height: 100%;
+              width: 60%;
+              margin-left: 30%;
+              padding-top: 35px;
+            }
+          }
+
+          .mok {
+            box-shadow: 0px 1px 0px 0px red,
+            0px 2px 0px 0px rgba(230, 135, 138, 1);
+            background: url("images/mok.png") no-repeat;
+
+            background-position: left center;
+            color: red;
+
+            a:visited {
+              color: red;
+            }
+          }
+          .eok {
+            box-shadow: 0px 1px 0px 0px blue,
+            0px 2px 0px 0px rgba(117, 198, 231, 1);
+            background: url("images/eok.png") no-repeat;
+
+            background-position: left center;
+            color: blue;
+
+            a:visited {
+              color: blue;
+            }
+          }
+          .nok {
+            box-shadow: 0px 1px 0px 0px green,
+            0px 2px 0px 0px rgba(152, 190, 143, 1);
+            background: url("images/nok.png") no-repeat;
+
+            background-position: left center;
+            color: green;
+
+            a:visited {
+              color: green;
+            }
+          }
+        }
+
+        .main-content {
+          margin-top: 40px;
+          margin-right:5%;
+
+          @media(max-width:1245px){
+            padding-right:0;
+            //margin-right:0;
+          }
+
+          @media(max-width:1000px){
+            margin-right:0;
+          }
+          &:after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+
+          section {
+
+            //outline: 2px solid green;
+            @media(max-width:1000px){
+
+
+            }
+
+            float: left;
+            //width: 800px;
+
+            //&:after{
+            //  content: "";
+            //  clear: both;
+            //  display: table;
+            //}
+
+            .image-container {
+              max-width: 655px;
+              min-height: 350px;
+              background-color: rgb(235, 236, 236);
+              margin-left: -40px;
+              margin-top: 28px;
+
+              @media(max-width:1245px){
+                margin-left:0;
+              }
+              //@media(max-width:655px){
+              //  width:100%;
+              //  //padding-left:30px;
+              //}
+
+              .bigImage {
+                width: 78%;
+                float: left;
+                height: 100%;
+
+                @media(max-width:660px){
+                  box-sizing: border-box;
+                  width:100%;
+                  max-width:100%;
+                  padding: 0 2.5%;
+                  background-color:black;
+
+                  img{
+                    height:auto;
+                    width:95%;
+                  }
+                }
+
+                img{
+                  //height:auto;
+                }
+
+
+              }
+
+              .smallImage {
+                //В старом padding, нужно ли вообще?
+                margin: 5px 5px 0 0;
+                float: right;
+                width: 21%;
+                height: 100px;
+                overflow: hidden;
+
+                @media(max-width:660px){
+                  float:none;
+                  width:100%;
+                }
+
+                img {
+                  height: 100%;
+                  max-width: 100%;
+                  //вроде не надо
+                  overflow: hidden;
+                }
+              }
+            }
+
+            .time {
+              color: rgb(142, 143, 137);
+              float: left;
+            }
+
+            h1 {
+              margin-left: 15%;
+              color: rgb(0, 114, 185);
+            }
+
+            .text {
+              margin-top: 70px;
+              //font: 38px "PT Sans";
+              max-width: 510px;
+              padding-left: 105px;
+              //box-sizing: border-box;
+
+              @media(max-width:660px){
+                padding-left:15px;
+              }
+
+            }
+          }
+
+          aside {
+
+            width: 324px;
+            float:right;
+            //margin-right: 40px;
+            //margin-left: 800px;
+            //margin-left:64%;
+            //outline: 2px solid green;
+
+            @media (max-width: 1000px){
+              display:none;
+            }
+            @media (max-width:1050px){
+              float:none;
+              margin-left:620px;
+              margin-right:0;
+
+            }
+
+            @media (max-width:1245px){
+              margin-right:0;
+
+            }
+
+
+
+            //В старой версии не было
+            &:after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+
+            .advertisement {
+              color: #ffffff;
+              //в старом дублируется в rings и requests
+              width: 324px;
+              height: 470px;
+            }
+
+            .advertisement:not(:first-child) {
+              margin-top: 50px;
+            }
+
+            .rings {
+              //background: url("images/advertisement1.png") no-repeat;
+              //background-size: cover;
+              //чтобы absolute у sideMenu работал правильно
+              position: relative;
+              .border-radius(5px);
+              overflow:hidden;
+
+              span {
+                position:absolute;
+                display: inline-block;
+                margin: 270px 55px 0 38px;
+                color: #ffffff;
+                z-index:11;
+
+
+                h1 {
+                  margin-bottom: 18px;
+                }
+              }
+
+              img{
+                max-height:100% !important;
+                display:block;
+                //max-height: 458px;
+                position: absolute;
+                z-index: 10;
+                transition: opacity .7s ease-in-out;
+              }
+
+              .sideMenu {
+                position: absolute;
+                display: none;
+                width: 100%;
+                //height: 100%;
+                z-index: 12;
+                //background: rgba(0, 114, 185, 1);
+                .border-radius(5px, 5px, 0, 0);
+
+                li {
+                  //height: 39px;
+                  background-color: rgba(0, 114, 185, 1);
+
+                  &:hover {
+                    background-color: rgba(0, 114, 185, 0.1);
+
+                    a {
+                      color:#0072b9;
+                    }
+
+                    span{
+                      background-color: rgba(0, 114, 185, 0.1);
+                    }
+                  }
+
+                  a {
+                    //!!!!
+                    box-sizing:border-box;
+
+                    display: inline-block;
+                    //vertical-align: center;
+                    //line-height: 36px;
+                    line-height: 21px;
+                    padding: 8px 0 7px 30px;
+                    color: white;
+                    //padding-left: 30px;
+                    width: 100%;
+                    height: 100%;
+                    font-weight: 800;
+
+                    border-bottom: 1px solid white;
+                    //br{
+                    //  padding: 0;
+                    //  margin:0;
+                    //}
+
+
+                  }
+
+                  .special{
+                    line-height:18px;
+                  }
+
+                  &:last-of-type {
+                    //height:41px;
+                    a {
+                      border-bottom: none;;
+                    }
+                  }
+                }
+              }
+
+              &:hover {
+                img{
+                  opacity: 0.1;
+                }
+                span{
+                  opacity: 0.1;
+                }
+
+                .sideMenu {
+                  display: block;
+
+                }
+              }
+            }
+
+            .requests {
+              background: url("images/advertisement2.png") no-repeat;
+              background-size: 100%;
+
+              span {
+                display: inline-block;
+                margin: 30px 40px 0 25px;
+              }
+
+              h1 {
+                color: yellow;
+                //при Img без стилей слишком большой интервал между строк
+                display: inline;
+
+              }
+
+              img {
+                //вроде и так inline-block
+                //display: inline-block;
+                height: 50px;
+                margin-top: -50px;
+                margin-left: 10px;
+              }
+            }
+
+          }
+        }
+
+
+      }
+    }
+
+    .blue-gradient {
+      //width: 1250px;
+      margin: 0 auto;
+      margin-top: -10px;
+      height: 265px;
+      background: rgba(7, 104, 165, 1);
+      background: -webkit-linear-gradient(45deg,
+      rgba(183, 222, 237, 1) 0%,
+      rgba(113, 206, 239, 1) 10%,
+      rgba(7, 107, 165, 1) 100%);
+      color: #ffffff;
+      //font: 42px "pt sans";
+      //new
+      font-size: 110%;
+      z-index: 99999;
+      //не нужно?
+      //Необходимо чтобы заработал z-index https://habrahabr.ru/post/166435/
+      position: relative;
+
+      .left-part {
+        float: left;
+        width: 445px;
+        height: 100%;
+
+        span {
+          display: inline-block;
+          margin: 35px 75px 0 45px;
+        }
+
+        img {
+          display: block;
+          height: 30%;
+          margin: 60px 0 0 45px;
+        }
+      }
+
+      > img:last-child {
+        height: 100%;
+        float: right;
+      }
+    }
+  }
+
+
+
+  footer {
+    @media(max-width:1245px){
+      //min-width:794px;
+      min-width: 100%;
+    }
+    height: 500px;
+    background-color: #ffffff;
+    //уменьшается до ширины наследника, становится меньше контейнера
+    //width: 100%;
+    min-width: 1245px;
+    margin-top: -130px;
+    //чтобы работал margin у child
+    padding-top: 130px;
+    //не надо?
+    //z-index: 100;
+    //position:relative;
+
+    //название
+    .footerDiv {
+
+      //width: 900px;
+      margin: 0 auto;
+      margin-top: 85px;
+      margin-bottom: 130px;
+      //height: 332px;
+      overflow:hidden;
+
+      @media(max-width:1245px){
+        //width:794px;
+        width: 100%;
+      }
+      .sponsor-label {
+        text-align: center;
+        //font: 38px "PT Sans";
+        color: rgb(0, 114, 185);
+        //text-transform: uppercase;
+        margin-bottom: 25px;
+      }
+
+    }
+
+    img {
+      display: block;
+      //если указать явно, то не выпадает за пределы родителя footerDiv
+      //height: 100%;
+      max-height:100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+
+}
+
+@media (max-width: 1245px){
+  //.advertisement{display:none;}
+  //.container{width:1200px;}
+  .left-part {
+    display: none;
+  }
+
+
+  .container {
+    //width: 794px;
+    width: 100%;
+  }
+  .main-content {
+    margin: 0 ;
+  }
+  //header{
+  //  display:none;
+  //}
+
+
+  .main-menu{
+    display:none;
+  }
+  //footer{
+  //  min-width:794px;
+  //
+  //  .footerDiv{
+  //    width:794px;
+  //  }
+  //}
+
+}
