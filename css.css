@@ -1,6 +1,11 @@
 @import "reset.css";
 .none {
-  display: none;
+  display: block !important;
+}
+@media (min-width: 1200px) {
+  .none {
+    display: inline-block !important;
+  }
 }
 body {
   margin: 0;
