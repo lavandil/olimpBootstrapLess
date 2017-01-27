@@ -129,6 +129,7 @@ body .container .white header .rio-timer .clock .row:last-of-type div {
   color: white;
   font-size: 20px;
   line-height: 50px;
+  margin-left: 5px;
 }
 body .container .white header .rio-timer .clock .row .red {
   background-color: #e31e24;
