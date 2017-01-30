@@ -207,8 +207,12 @@ body .container .white .main-menu > li {
 @media (max-width: 1200px) {
   body .container .white .main-menu > li {
     line-height: 40px;
-    width: calc(100% - 30px);
+    width: 100%;
+    padding: 0;
     display: none;
+  }
+  body .container .white .main-menu > li a {
+    width: 100%;
   }
 }
 body .container .white .main-menu > li a {
@@ -231,17 +235,35 @@ body .container .white .main-menu > li ul li {
 body .container .white .main-menu > li ul li:last-of-type {
   padding-bottom: 40px;
 }
+@media (max-width: 1200px) {
+  body .container .white .main-menu > li ul li:last-of-type {
+    padding-bottom: 10px;
+  }
+}
 body .container .white .main-menu > li:hover {
   background: white;
   border-left: 2px solid #55BFEC;
   border-right: 2px solid #55BFEC;
   border-bottom: none;
   padding: 0 13px;
+  height: 100%;
 }
-body .container .white .main-menu > li:hover a {
+@media (max-width: 1200px) {
+  body .container .white .main-menu > li:hover {
+    background: orange;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+}
+body .container .white .main-menu > li:hover > a {
   color: #467A9A;
-  display: inline-block;
-  width: 100%;
+}
+@media (max-width: 1200px) {
+  body .container .white .main-menu > li:hover > a {
+    color: white;
+    width: 100%;
+  }
 }
 body .container .white .main-menu > li:hover ul {
   display: block;
@@ -250,6 +272,19 @@ body .container .white .main-menu > li:hover ul {
   width: 100%;
   border-top: none;
   margin-left: -15px;
+}
+body .container .white .main-menu > li:hover ul a {
+  color: #467A9A;
+}
+@media (max-width: 1200px) {
+  body .container .white .main-menu > li:hover ul {
+    position: static;
+    border: none;
+    margin: 0;
+  }
+  body .container .white .main-menu > li:hover ul li {
+    text-align: center;
+  }
 }
 body .container .white .main-menu .navbar-toggle {
   position: absolute;
