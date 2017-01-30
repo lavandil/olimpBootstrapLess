@@ -72,8 +72,8 @@
             secondsSpan.className = active;
             var secondsSpan2 = document.createElement('span');
 
-            seconds.append(secondsSpan);
-            seconds.append(secondsSpan2);
+            seconds.appendChild(secondsSpan);
+            seconds.appendChild(secondsSpan2);
 
             var minutes = document.createElement('div');
             minutes.className = that._options.classNameMinutes;
@@ -81,8 +81,8 @@
             minutesSpan.className = active;
             var minutesSpan2 = document.createElement('span');
 
-            minutes.append(minutesSpan);
-            minutes.append(minutesSpan2);
+            minutes.appendChild(minutesSpan);
+            minutes.appendChild(minutesSpan2);
 
             var hours = document.createElement('div');
             hours.className = that._options.classNameHours;
@@ -90,8 +90,8 @@
             hoursSpan.className = active;
             var hoursSpan2 = document.createElement('span');
 
-            hours.append(hoursSpan);
-            hours.append(hoursSpan2);
+            hours.appendChild(hoursSpan);
+            hours.appendChild(hoursSpan2);
 
             var clearDiv = document.createElement('div');
             clearDiv.className = that._options.classNameClearDiv;
