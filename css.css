@@ -291,6 +291,7 @@ body .container .white .superMain .partners:after {
   content: "";
 }
 body .container .white .superMain .partners .partner {
+  display: block;
   float: left;
   height: 110px;
   width: 33.33333333%;
