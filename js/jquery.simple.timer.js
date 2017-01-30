@@ -329,13 +329,21 @@
                   if(activeSpan.is(":last-child")) {
 
                       var beforeSpan = activeSpan.prev();
-                      beforeSpan.addClass(active).removeClass(before).text(finalValues[i]);
-                      activeSpan.addClass(before).removeClass(active);
+                      beforeSpan
+                          .addClass(active)
+                          .removeClass(before)
+                          .text(finalValues[i]);
+
+                      activeSpan
+                          .addClass(before)
+                          .removeClass(active)
+                          .text("");
                   }
                   else {
                       activeSpan
                           .addClass(before)
                           .removeClass(active)
+                          .text("")
                           .next("span")
                           .addClass(active)
                           .removeClass(before)
