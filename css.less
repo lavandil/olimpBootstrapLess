@@ -337,14 +337,25 @@ body {
             border-bottom: none;
             //Можно ли лучше?
             padding: 0 13px;
-            height: 100%;
+
+
 
             @media(max-width: 1200px){
+
+            &.parentli{
+              z-index:15;
+              position: absolute;
+
+
+              +li{
+                margin-top:40px;
+              }
+            }
+
               background: orange;
               padding: 0;
               margin:0;
               border:none;
-
             }
 
             >a{
@@ -373,6 +384,8 @@ body {
                 position:static;
                 border:none;
                 margin: 0;
+
+                transition: display 4s;
                 li{
                   text-align: center;
                 }

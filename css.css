@@ -246,7 +246,6 @@ body .container .white .main-menu > li:hover {
   border-right: 2px solid #55BFEC;
   border-bottom: none;
   padding: 0 13px;
-  height: 100%;
 }
 @media (max-width: 1200px) {
   body .container .white .main-menu > li:hover {
@@ -254,6 +253,13 @@ body .container .white .main-menu > li:hover {
     padding: 0;
     margin: 0;
     border: none;
+  }
+  body .container .white .main-menu > li:hover.parentli {
+    z-index: 15;
+    position: absolute;
+  }
+  body .container .white .main-menu > li:hover.parentli + li {
+    margin-top: 40px;
   }
 }
 body .container .white .main-menu > li:hover > a {
@@ -281,6 +287,7 @@ body .container .white .main-menu > li:hover ul a {
     position: static;
     border: none;
     margin: 0;
+    transition: display 4s;
   }
   body .container .white .main-menu > li:hover ul li {
     text-align: center;
