@@ -167,10 +167,10 @@ body .container .white header .rio-timer .clock .row:last-of-type div span.activ
 body .container .white header .rio-timer .clock .row .red {
   background-color: #e31e24;
 }
-body .container .white header .rio-timer .clock .row .green {
+body .container .white header .rio-timer .clock .row .blue {
   background-color: #0072b9;
 }
-body .container .white header .rio-timer .clock .row .blue {
+body .container .white header .rio-timer .clock .row .green {
   background-color: #62ba4c;
 }
 body .container .white header .rio-logo {

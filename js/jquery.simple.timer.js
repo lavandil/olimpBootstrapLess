@@ -50,8 +50,8 @@
         opts = opts || {};
         var classNames = opts.classNames || {};
 
-        timer._options.classNameSeconds = classNames.seconds || 'green'
-            , timer._options.classNameMinutes = classNames.minutes || 'blue'
+        timer._options.classNameSeconds = classNames.seconds || 'blue'
+            , timer._options.classNameMinutes = classNames.minutes || 'green'
             , timer._options.classNameHours = classNames.hours || 'red'
             , timer._options.classNameClearDiv = classNames.clearDiv || 'jst-clearDiv'
             , timer._options.classNameTimeout = classNames.timeout || 'jst-timeout';
