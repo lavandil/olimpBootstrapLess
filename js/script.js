@@ -35,7 +35,7 @@ $(function(){
           zeroDate: "2018-02-10"
         }
     );
-})
+});
 
 (function(){
     var images = $('.smallImage img');

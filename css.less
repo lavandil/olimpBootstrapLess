@@ -523,10 +523,22 @@ body {
 
             .image-container {
               max-width: 655px;
-              min-height: 350px;
+              height: 350px;
               background-color: rgb(235, 236, 236);
               margin-left: -40px;
               margin-top: 28px;
+
+              padding-bottom: 5px;
+
+              &:after{
+                clear:both;
+                display:table;
+                content:"";
+              }
+
+              @media(max-width: 660px ){
+                height: auto;
+              }
 
               @media(max-width:1245px){
                 margin-left:0;
@@ -541,9 +553,15 @@ body {
                 float: left;
                 height: 100%;
 
+                img{
+                  width: 99%;
+                }
+
+
                 @media(max-width:660px){
                   box-sizing: border-box;
                   width:100%;
+                  min-height:325px;
                   max-width:100%;
                   padding: 0 2.5%;
                   background-color:black;
@@ -554,9 +572,6 @@ body {
                   }
                 }
 
-                img{
-                  //height:auto;
-                }
 
 
               }
@@ -567,18 +582,23 @@ body {
                 float: right;
                 width: 21%;
                 height: 100px;
-                overflow: hidden;
+                //overflow: hidden;
 
                 @media(max-width:660px){
                   float:none;
                   width:100%;
+                  overflow:hidden;
+                  img{
+                      height: 100%;
+                  }
                 }
 
                 img {
-                  height: 100%;
+                  //height: 100%;
                   max-width: 100%;
                   //вроде не надо
                   overflow: hidden;
+                  cursor: pointer;
                 }
               }
             }

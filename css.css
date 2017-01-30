@@ -364,10 +364,21 @@ body .container .white .superMain .main-content section {
 }
 body .container .white .superMain .main-content section .image-container {
   max-width: 655px;
-  min-height: 350px;
+  height: 350px;
   background-color: #ebecec;
   margin-left: -40px;
   margin-top: 28px;
+  padding-bottom: 5px;
+}
+body .container .white .superMain .main-content section .image-container:after {
+  clear: both;
+  display: table;
+  content: "";
+}
+@media (max-width: 660px) {
+  body .container .white .superMain .main-content section .image-container {
+    height: auto;
+  }
 }
 @media (max-width: 1245px) {
   body .container .white .superMain .main-content section .image-container {
@@ -379,10 +390,14 @@ body .container .white .superMain .main-content section .image-container .bigIma
   float: left;
   height: 100%;
 }
+body .container .white .superMain .main-content section .image-container .bigImage img {
+  width: 99%;
+}
 @media (max-width: 660px) {
   body .container .white .superMain .main-content section .image-container .bigImage {
     box-sizing: border-box;
     width: 100%;
+    min-height: 325px;
     max-width: 100%;
     padding: 0 2.5%;
     background-color: black;
@@ -397,18 +412,21 @@ body .container .white .superMain .main-content section .image-container .smallI
   float: right;
   width: 21%;
   height: 100px;
-  overflow: hidden;
 }
 @media (max-width: 660px) {
   body .container .white .superMain .main-content section .image-container .smallImage {
     float: none;
     width: 100%;
+    overflow: hidden;
+  }
+  body .container .white .superMain .main-content section .image-container .smallImage img {
+    height: 100%;
   }
 }
 body .container .white .superMain .main-content section .image-container .smallImage img {
-  height: 100%;
   max-width: 100%;
   overflow: hidden;
+  cursor: pointer;
 }
 body .container .white .superMain .main-content section .time {
   color: #8e8f89;
