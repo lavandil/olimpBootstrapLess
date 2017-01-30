@@ -259,7 +259,7 @@ body {
 
       .main-menu {
         position:relative;
-        overflow:hidden;
+        //overflow:hidden;
         min-height: 70px;
         //двухстрочное меню
 
@@ -302,6 +302,8 @@ body {
 
           a {
             color: white;
+            display: inline-block;
+            max-height: 100%;
           }
           ul {
             display: none;
@@ -331,7 +333,9 @@ body {
 
             a {
               color: #467A9A;
-            }
+              display: inline-block;
+              width:100%;
+          }
 
             ul {
               display: block;

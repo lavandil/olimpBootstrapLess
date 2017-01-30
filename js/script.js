@@ -36,3 +36,21 @@ $(function(){
         }
     );
 })
+
+(function(){
+    var images = $('.smallImage img');
+
+    for (var i = 0; i < images.length; i++) {
+
+        var image = images[i];
+        image.addEventListener("click", makeActive, false);
+
+    }
+
+    function makeActive(){
+
+        var bigImage = document.getElementsByClassName("bigImage")[0].children[0].src=this.src;
+
+    }
+
+})();

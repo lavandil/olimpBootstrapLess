@@ -187,7 +187,6 @@ body .container .white header .rio-logo img {
 }
 body .container .white .main-menu {
   position: relative;
-  overflow: hidden;
   min-height: 70px;
   height: 100%;
   background-color: #167AAE;
@@ -214,6 +213,8 @@ body .container .white .main-menu > li {
 }
 body .container .white .main-menu > li a {
   color: white;
+  display: inline-block;
+  max-height: 100%;
 }
 body .container .white .main-menu > li ul {
   display: none;
@@ -239,6 +240,8 @@ body .container .white .main-menu > li:hover {
 }
 body .container .white .main-menu > li:hover a {
   color: #467A9A;
+  display: inline-block;
+  width: 100%;
 }
 body .container .white .main-menu > li:hover ul {
   display: block;
