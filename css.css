@@ -130,6 +130,39 @@ body .container .white header .rio-timer .clock .row:last-of-type div {
   font-size: 20px;
   line-height: 50px;
   margin-left: 5px;
+  position: relative;
+}
+body .container .white header .rio-timer .clock .row:last-of-type div span {
+  position: absolute;
+  color: white;
+  left: 10%;
+}
+body .container .white header .rio-timer .clock .row:last-of-type div span:last-of-type {
+  opacity: 0;
+}
+body .container .white header .rio-timer .clock .row:last-of-type div span.before {
+  animation: hide .5s 1.3s linear both;
+}
+body .container .white header .rio-timer .clock .row:last-of-type div span.active {
+  animation: show .7s 1.3s linear both;
+}
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 body .container .white header .rio-timer .clock .row .red {
   background-color: #e31e24;

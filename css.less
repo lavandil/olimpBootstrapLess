@@ -27,6 +27,8 @@
     }
 }
 
+
+
 body {
 
   //display:table;
@@ -184,6 +186,47 @@ body {
                 font-size: 20px;
                 line-height: 50px;
                 margin-left:5px;
+                position:relative;
+
+
+                span{
+                  position: absolute;
+                  color: white;
+                  left:10%;
+
+                  &:last-of-type{
+                    opacity: 0;
+                  }
+
+                  &.before{
+                     animation: hide .5s 1.3s linear both;
+                  }
+
+                  &.active{
+                    animation: show .7s 1.3s linear both;
+                  }
+
+                  @keyframes hide{
+                    from{
+                      opacity: 1;
+                    }
+                    to{
+                      opacity:0;
+                    }
+                  }
+
+                  @keyframes show{
+                    from{
+                      opacity: 0;
+                      transform: translateY(-50px);
+                    }
+                    to{
+                      opacity:1;
+                      transform: translateY(0px);
+                    }
+                  }
+
+                }
               }
 
               .red {
